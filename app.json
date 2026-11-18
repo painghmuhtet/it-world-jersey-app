@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "IT WORLD JERSEY",
+    "slug": "it-world-jersey",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "itworldjersey",
+    "android": {
+      "package": "com.itworldjersey.app",
+      "versionCode": 1
+    },
+    "ios": {
+      "bundleIdentifier": "com.itworldjersey.app"
+    },
+    "extra": {
+      "websiteUrl": "https://itworldjersey.store",
+      "shopUrl": "https://itworldjersey.store/shop",
+      "videosUrl": "https://videos.itworldjersey.store"
+    }
+  }
+}

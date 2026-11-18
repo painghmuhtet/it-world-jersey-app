@@ -20,10 +20,11 @@
       }
     },
     "extra": {
-      "websiteUrl": "https://itworldjersey.store",
-      "appUrl": "https://itworldjersey.store/app/",
-      "shopUrl": "https://itworldjersey.store/shop",
-      "videosUrl": "https://videos.itworldjersey.store"
+  "eas": {
+    "projectId": "ff93150a-7870-4c68-81ac-acf17f149867"
+  },
+  "websiteUrl": "https://itworldjersey.store",
+  "appUrl": "https://itworldjersey.store/app/",
+  "shopUrl": "https://itworldjersey.store/shop",
+  "videosUrl": "https://videos.itworldjersey.store"
     }
-  }
-}

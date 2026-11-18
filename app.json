@@ -6,16 +6,22 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "backgroundColor": "#080b10",
     "scheme": "itworldjersey",
     "android": {
       "package": "com.itworldjersey.app",
       "versionCode": 1
     },
     "ios": {
-      "bundleIdentifier": "com.itworldjersey.app"
+      "bundleIdentifier": "com.itworldjersey.app",
+      "supportsTablet": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "extra": {
       "websiteUrl": "https://itworldjersey.store",
+      "appUrl": "https://itworldjersey.store/app/",
       "shopUrl": "https://itworldjersey.store/shop",
       "videosUrl": "https://videos.itworldjersey.store"
     }

@@ -15,8 +15,11 @@ import {
   SafeAreaView,
 } from "react-native-safe-area-context";
 import { WebView } from "react-native-webview";
+import pageHtml from "./web/page";
 
-const APP_URL = "https://itworldjersey.store/app/";
+// The home screen is bundled in the app (web/page.js). Links inside it open the
+// live pages of the website inside the same WebView.
+const BASE_URL = "https://itworldjersey.store/app/";
 const ALLOWED_HOST = "itworldjersey.store";
 const BG = "#080b10";
 
@@ -56,7 +59,6 @@ export default function App() {
   const retry = () => {
     setFailed(false);
     setLoading(true);
-    if (webRef.current) webRef.current.reload();
   };
 
   return (
@@ -71,13 +73,13 @@ export default function App() {
               Can't connect. Check your internet connection and try again.
             </Text>
             <Pressable style={styles.button} onPress={retry}>
-              <Text style={styles.buttonText}>TRY AGAIN</Text>
+              <Text style={styles.buttonText}>BACK TO HOME</Text>
             </Pressable>
           </View>
         ) : (
           <WebView
             ref={webRef}
-            source={{ uri: APP_URL }}
+            source={{ html: pageHtml, baseUrl: BASE_URL }}
             style={styles.web}
             containerStyle={styles.web}
             originWhitelist={["*"]}
@@ -94,7 +96,6 @@ export default function App() {
             allowsInlineMediaPlayback
             mediaPlaybackRequiresUserAction={false}
             allowsBackForwardNavigationGestures
-            pullToRefreshEnabled
             setSupportMultipleWindows={false}
             sharedCookiesEnabled
           />

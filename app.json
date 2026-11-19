@@ -2,9 +2,12 @@
   "expo": {
     "name": "IT WORLD JERSEY",
     "slug": "it-world-jersey",
-    "owner": "itworldjerseys-team",
+    "owner": "itworldjersey",
     "version": "1.0.0",
-    "orientation": "portrait",
+    ...
+    "extra": {
+      "eas": {
+        "projectId": "99110b65-e055-46c3-ba1a-a03fe5755341"
     "userInterfaceStyle": "dark",
     "backgroundColor": "#080b10",
     "scheme": "itworldjersey",
@@ -17,16 +20,11 @@
       "supportsTablet": true,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
-      }
-    },
-    "extra": {
-  "eas": {
-    "projectId": "99110b65-e055-46c3-ba1a-a03fe5755341"
-  },
-  "websiteUrl": "https://itworldjersey.store",
-  "appUrl": "https://itworldjersey.store/app/",
-  "shopUrl": "https://itworldjersey.store/shop",
-  "videosUrl": "https://videos.itworldjersey.store"
+      },
+      "websiteUrl": "https://itworldjersey.store",
+      "appUrl": "https://itworldjersey.store/app/",
+      "shopUrl": "https://itworldjersey.store/shop",
+      "videosUrl": "https://videos.itworldjersey.store"
     }
   }
-}
+    }

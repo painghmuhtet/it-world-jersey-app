@@ -1,0 +1,50 @@
+name: AAB to APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Download bundletool
+        run: |
+          curl -L -o bundletool.jar \
+            https://github.com/google/bundletool/releases/latest/download/bundletool-all-1.18.1.jar
+
+      - name: Find AAB
+        run: |
+          find . -name "*.aab" -type f
+
+      - name: Convert AAB to universal APK
+        run: |
+          AAB=$(find . -name "*.aab" -type f | head -n 1)
+
+          java -jar bundletool.jar build-apks \
+            --bundle="$AAB" \
+            --output=app.apks \
+            --mode=universal \
+            --ks=upload-keystore.jks \
+            --ks-key-alias=upload \
+            --ks-pass=pass:"$KEYSTORE_PASSWORD" \
+            --key-pass=pass:"$KEY_PASSWORD"
+
+      - name: Extract APK
+        run: |
+          unzip -o app.apks -d extracted
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: IT-WORLD-JERSEY-APK
+          path: extracted/universal.apk

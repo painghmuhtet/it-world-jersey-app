@@ -4,27 +4,38 @@
     "slug": "it-world-jersey",
     "owner": "itworldjersey",
     "version": "1.0.0",
-    ...
-    "extra": {
-      "eas": {
-        "projectId": "99110b65-e055-46c3-ba1a-a03fe5755341"
+    "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "backgroundColor": "#080b10",
     "scheme": "itworldjersey",
+
     "android": {
       "package": "com.itworldjersey.app",
       "versionCode": 1
     },
+
     "ios": {
       "bundleIdentifier": "com.itworldjersey.app",
       "supportsTablet": true,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+
+    "extra": {
+      "eas": {
+        "projectId": "99110b65-e055-46c3-ba1a-a03fe5755341"
       },
       "websiteUrl": "https://itworldjersey.store",
       "appUrl": "https://itworldjersey.store/app/",
       "shopUrl": "https://itworldjersey.store/shop",
       "videosUrl": "https://videos.itworldjersey.store"
-    }
+    },
+
+    "sdkVersion": "54.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ]
   }
-    }
+}
